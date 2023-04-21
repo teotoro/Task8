@@ -21,8 +21,8 @@
 <body>
     <header class="homepage-header bg-grey">
         <a href="index.html" class="topnav-logo"><img src="img/logo.svg" alt="Sulakauri Publishing House logo"></a>
-        <nav class="topnav">
-            <ul class="topnav-wrapper">
+        <nav id="top-nav" class="topnav">
+            <ul id="menu" class="topnav-wrapper">
                 <li class="topnav-item active"><a href="index.html">წიგნები</a></li>
                 <li class="topnav-item"><a href="#">ავტორები</a></li>
                 <li class="topnav-item"><a href="#">ჩვენს შესახებ</a></li>
@@ -30,6 +30,14 @@
                 <li class="topnav-item"><a href="#">კონტაქტი</a></li>
             </ul>
         </nav>
+        <div id="hamburger-menu">
+            <div id="open" class="menu-icon  active-icon">
+                <i class="fa-sharp fa-solid fa-bars fa-2xl "></i>
+            </div>
+            <div id="close" class="menu-icon ">
+                <i class="fa-solid fa-x fa-2xl"></i>
+            </div>
+        </div>
     </header>
     <main class="homepage-main container">
         <section class="homepage-banner">
@@ -46,7 +54,7 @@
                 <div class="book-item">
                     <div class="book-item-img">
                         <img src="img/book1.png" alt="book cover">
-                        <a href="#" class="overlay">კალათაში დამატება</a>
+                        <button class="overlay">კალათაში დამატება <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></button>
                     </div>
                     <a href="single-page.html" class="book-item-content">
                         <span class="book-author">თამთა მელაშვილი</span>
@@ -57,7 +65,7 @@
                 <div class="book-item">
                     <div class="book-item-img">
                         <img src="img/book2.png" alt="book cover">
-                        <a href="#" class="overlay">კალათაში დამატება</a>
+                        <button class="overlay">კალათაში დამატება <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></button>
                     </div>
                     <a href="" class="book-item-content">
                         <span class="book-author">ეკა ქევანიშვილი</span>
@@ -68,7 +76,7 @@
                 <div class="book-item">
                     <div class="book-item-img">
                         <img src="img/book3.png" alt="book cover">
-                        <a href="#" class="overlay">კალათაში დამატება</a>
+                        <button class="overlay">კალათაში დამატება <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></button>
                     </div>
                     <a href="" class="book-item-content">
                         <span class="book-author">ზაირა არსენიშვილი</span>
@@ -116,6 +124,8 @@
 
         </ul>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 
 </html>

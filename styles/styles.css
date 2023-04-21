@@ -7,6 +7,7 @@
 a, a:hover, a:focus, a:active{
     text-decoration: none;
     color:inherit;
+    cursor: pointer;
 }
 
 li{
@@ -39,7 +40,7 @@ body{
 
 img{
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -54,6 +55,11 @@ h2{
 h1{
     font-size: 4rem;
     font-weight: 500;
+}
+
+
+#hamburger-menu{
+    display: none;
 }
 
 .bg-grey{
@@ -83,6 +89,7 @@ h1{
     justify-content: space-between;
     align-items: center;
     padding: 5rem 13rem;
+    height: 20rem;
 }
 
 .topnav-logo{
@@ -141,6 +148,10 @@ h1{
 .book-item-img:hover .overlay {
     transform: scale(1);
     opacity: .95;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    font-size: 2.4rem;
   }
 
   .book-item-img:focus .overlay{
@@ -171,6 +182,10 @@ h1{
     display: flex;
     flex-direction: column;
     row-gap: .8rem;
+}
+
+.book-item-content:hover .book-title{
+    color: var(--hover-color);
 }
 
 .book-author{
@@ -289,4 +304,116 @@ h1{
 
 .single-page-main>article:not(:last-child){
     margin-bottom: 10rem;
+}
+
+
+@media all and (max-width: 1200px){
+    body{
+        font-size: 2rem;
+    }
+
+    .icon-wrapper{
+        width: 6rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    
+    h1{
+        font-size: 3rem;
+    }
+
+    .container{
+        padding: 10rem 7rem;
+    }
+
+    .topnav-wrapper{
+        column-gap: 2.8rem;
+    }
+}
+
+@media all and (max-width: 1084px){
+    .homepage-main{
+        row-gap: 7rem;
+    }
+
+    .container{
+        padding: 7rem 5rem;
+    }
+
+    .homepage-header{
+        position: relative;
+    }
+
+    .topnav-wrapper{
+        display: none
+    }
+
+    .drop-down{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 3rem;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        background: #efefef;
+        top: 20rem;
+        left: 0;
+        padding: 3rem;
+        color:var(--dark-color);
+        overflow: hidden;
+    }
+
+    .topnav-logo{
+        max-width: 15rem;
+    }
+
+    .icon-wrapper{
+        width: 5rem;
+    }
+    
+    #hamburger-menu{
+        display: block;
+    }
+
+    .menu-icon{
+        display: none;
+    }
+
+    .active-icon{
+        display: block;
+    }
+
+    .content-list{
+        column-gap: 2rem;
+        flex-wrap: wrap;
+        row-gap: 5rem;
+    }
+    
+    .book-item{
+        width: calc(50% - 2rem);
+    }
+}
+
+
+@media all and (max-width: 928px){
+    .container{
+        padding: 8rem 4rem;
+    }
+
+    .topnav-logo{
+        max-width: 10rem;
+    }
+
+    .content-list{
+        justify-content: center;
+    }
+    
+    .book-item{
+        width: 70%;
+    }
 }
