@@ -396,8 +396,9 @@ h1{
 
     .homepage-header{
         position: relative;
+        padding: 3rem 8rem;
     }
-
+  
     .topnav-wrapper{
         display: none
     }
@@ -470,12 +471,20 @@ h1{
 
 
 @media all and (max-width: 928px){
+    .homepage-main{
+        row-gap: 5rem;
+    }
+
     .container{
-        padding: 8rem 4rem;
+        padding: 3rem 2rem;
+    }
+
+    .homepage-header{
+        padding: 2rem 4rem;
     }
 
     .topnav-logo{
-        max-width: 10rem;
+        max-width: 6rem;
     }
 
     .content-list{
