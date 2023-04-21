@@ -38,6 +38,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active-dot";
 }
 
+
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
   
