@@ -21,15 +21,23 @@
 <body class="singl-page">
     <header class="homepage-header bg-grey">
         <a href="index.html" class="topnav-logo"><img src="img/logo.svg" alt="Sulakauri Publishing House logo"></a>
-        <nav class="topnav">
-            <ul class="topnav-wrapper">
-                <li class="topnav-item "><a href="index.html">წიგნები</a></li>
-                <li class="topnav-item active"><a href="#">ავტორები</a></li>
+        <nav id="top-nav" class="topnav">
+            <ul id="menu" class="topnav-wrapper">
+                <li class="topnav-item active"><a href="index.html">წიგნები</a></li>
+                <li class="topnav-item"><a href="#">ავტორები</a></li>
                 <li class="topnav-item"><a href="#">ჩვენს შესახებ</a></li>
                 <li class="topnav-item"><a href="#">ბლოგი</a></li>
                 <li class="topnav-item"><a href="#">კონტაქტი</a></li>
             </ul>
         </nav>
+        <div id="hamburger-menu">
+            <div id="open" class="menu-icon  active-icon">
+                <i class="fa-sharp fa-solid fa-bars fa-2xl "></i>
+            </div>
+            <div id="close" class="menu-icon ">
+                <i class="fa-solid fa-x fa-2xl"></i>
+            </div>
+        </div>
     </header>
 
     <main class="single-page-main">
@@ -56,31 +64,49 @@
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
-                <span class="book-tag"><a href"#">მარაგში</a></span>
-                <button class="book-button">კალათაში დამატება</button>
+                <div class="book-tags">
+                    <span class="book-tag"><a href"#">მარაგში</a></span>
+                    <button class="book-button">კალათაში დამატება</button>
+                </div>
             </section>
         </article>
-        <article>
-            <section>
-                <ul>
-                    <li><a href="">წიგნის აღწერა</a></li>
-                    <li><a href="">ავტორი</a></li>
+        <article class="summery-section">
+            <section class="tab-list">
+                <ul class="tab-wrapper">
+                    <li id="default" class="tab-title" onclick="openTab(event, 'book-summery')"><a
+                            href="#book-summery">წიგნის აღწერა</a></li>
+                    <li class="tab-title" onclick="openTab(event, 'author-summery')"><a
+                            href="#author-summery">ავტორი</a></li>
                 </ul>
             </section>
-            <section>
-                <p>ეთეროს ფიქრების, განცდებისა და ემოციების კორიანტელში თანდათან იკვეთება მთავარი გმირის მძიმე ცხოვრების
-                    ისტორია; პროვინციული ქალაქების, ერთი შეხედვით,უძრავი და უცვლელი, სოციალური თ უპიროვნული სირთულეებით
-                    დაღდასმული ყოფა, რომელიც ადამიანებზე გამანადგურებლად მოქმედებს; დილემები, რომელთა წინაშეც მთავარი
-                    გმირი უეცრად აღმოჩნდება და რაზეც საბოლოო პასუხიც მკითხველმა უნდა გასცეს.
-                    „შაშვი შაშვი მაყვალი“ თამთა მელაშვილის მესამე რომანია. მისი „გათვლა“ 2010 წელს, ხოლო „აღმოსავლეთით“
-                    2015 წელს გამოიცა. „გათვლა“ თარგმნილია გერმანულ, იტალიურ, რუსულ, ხორვატიულ, მაკედონიურ და ალბანურ
-                    ენებზე. რომანმა 2011 წელს ლიტერატურული პრემია საბა, 2013 წელს კი Deutscher Jugendliteraturpreis
-                    მოიპოვა.
-                <div>
-                    <div><img src="" alt=""></div>
-                    <span>საქართველო</span>
-                    <h3>თამთა მელაშვილი</h3>
-                    <p>დაიბადა 1979 წელს</p>
+            <section class="tab-content">
+                <div id="book-summery" class="tab-info">
+                    <p>ეთეროს ფიქრების, განცდებისა და ემოციების კორიანტელში თანდათან იკვეთება მთავარი გმირის მძიმე
+                        ცხოვრების
+                        ისტორია; პროვინციული ქალაქების, ერთი შეხედვით,უძრავი და უცვლელი, სოციალური თ უპიროვნული
+                        სირთულეებით
+                        დაღდასმული ყოფა, რომელიც ადამიანებზე გამანადგურებლად მოქმედებს; დილემები, რომელთა წინაშეც
+                        მთავარი
+                        გმირი უეცრად აღმოჩნდება და რაზეც საბოლოო პასუხიც მკითხველმა უნდა გასცეს.
+                        „შაშვი შაშვი მაყვალი“ თამთა მელაშვილის მესამე რომანია. მისი „გათვლა“ 2010 წელს, ხოლო
+                        „აღმოსავლეთით“
+                        2015 წელს გამოიცა. „გათვლა“ თარგმნილია გერმანულ, იტალიურ, რუსულ, ხორვატიულ, მაკედონიურ და
+                        ალბანურ
+                        ენებზე. რომანმა 2011 წელს ლიტერატურული პრემია საბა, 2013 წელს კი Deutscher Jugendliteraturpreis
+                        მოიპოვა.
+                </div>
+                <div id="author-summery" class="tab-info">
+                    <div class="author-heading">
+                        <div class="author-img">
+                            <img src="img/TamtaMelashvili.jpg" alt="author img">
+                        </div>
+                        <div class="author-meta">
+                            <span>საქართველო</span>
+                            <h3>თამთა მელაშვილი</h3>
+                            <p>დაიბადა 1979 წელს</p>
+                        </div>
+                    </div>
+
                     <p>თამთა მელაშვილი ქართველი მწერალი, მკვლევარი, ლექტორი და ფემინისტი აქტივისტია. თუმცა, უჭირს
                         "მწერლის"
                         იარლიყის მორგება და როგორც თვითონ ამბობს, ტერმინ "ავტორს" უფრო ეპოტინება.
@@ -116,7 +142,7 @@
         </ul>
     </footer>
 
-    <script src="mai"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
